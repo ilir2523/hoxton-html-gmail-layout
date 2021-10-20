@@ -8,10 +8,10 @@
     display: grid;
 
     grid-template:
-        'header header header' 48px
-        'colon-1-r1 colon-2 colon-3'2fr
-        'colon-1-r2 colon-2 colon-3' 1fr /
-        256px 1fr 55px;
+        'header header header header' 48px
+        'colon-1-r1 colon-2 colon-4 colon-3'2fr
+        'colon-1-r2 colon-2 colon-4 colon-3' 1fr /
+        256px 1fr 300px 55px;
     height: 100vh;
     width: 100vw;
     
@@ -58,13 +58,49 @@ ul {
     grid-area:colon-3;
     background-color: #34a853;
 }
+.colon-4 {
+    grid-area: colon-4;
+    background-color: #4285f4;
+    overflow: scroll;
+}
+
+.compose-img {
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Google Sans', Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: .875rem;
+    letter-spacing: .25px;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    background-image: none;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    color: #3c4043;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    font-weight: 500;
+    height: 48px;
+    min-width: 56px;
+    overflow: hidden;
+    padding: 0 24px 0 0;
+    text-transform: none;
+}
+.compose-img:hover {
+    box-shadow: 0px 2px 3px 1px #c0c0c0;
+}
+
 
 @media screen and (max-width: 800px) {
+    .colon-4 {
+        display: none;
+    }
     .contenier {
     grid-template:
         'header header header' 48px
-        'colon-1-r1 colon-2 colon-3'2fr
-        'colon-1-r2 colon-2 colon-3' 1fr /
+        'colon-1-r1 colon-2  colon-3'2fr
+        'colon-1-r2 colon-2  colon-3' 1fr /
         55px 1fr 55px;
     }
 }
